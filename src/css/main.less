@@ -1,0 +1,140 @@
+@import './base.less';
+
+#app {
+  .leaflet-popup {
+    margin-left: 220px;
+    margin-bottom: -295px !important;
+    .leaflet-popup-content-wrapper {
+      border-radius: 12px;
+      background-color: #3b4354;
+      box-shadow: none;
+      padding: 0;
+      .leaflet-popup-content {
+        width: auto !important;
+        margin: 0;
+        .point-popup-container {
+          width: 375px;
+          font-size: 14px;
+          position: relative;
+          padding: 12px 12px 10px;
+          .popup-title {
+            color: #d3bc8e;
+            margin-bottom: 7px;
+          }
+          .popup-pic {
+            width: 355px;
+            height: 200px;
+            background-size: cover;
+            border-radius: 6px;
+          }
+          .point-name {
+            margin-top: 10px;
+            font-size: 14px;
+            color: #ece5d8;
+          }
+          .contributor-container {
+            margin-top: 10px;
+            display: flex;
+            .contributor-label {
+              color: #9b9c9f;
+              font-size: 12px;
+              margin-right: 10px;
+              padding-top: 6px;
+            }
+            .avatar-container {
+              display: flex;
+              .avatar-item {
+                width: 24px;
+                height: 24px;
+                background-size: cover;
+                border-radius: 50%;
+              }
+            }
+          }
+          .point-time {
+            font-size: 12px;
+            color: #9b9c9f;
+            line-height: 30px;
+          }
+        }
+      }
+    }
+    .leaflet-popup-tip-container {
+      display: none;
+    }
+  }
+  .leaflet-popup-close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 24px;
+    height: 24px;
+    color: #757575;
+    background-image: url('../assets/images/map/close-icon.png');
+    background-size: cover;
+  }
+}
+
+.map-marker-item {
+  .area-mark-item {
+    white-space: nowrap;
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: bold;
+    text-shadow:
+      0 0 3px,
+      #333;
+  }
+}
+
+.point-item-container {
+  position: relative;
+  width: 37px;
+  height: 40px;
+  background-size: cover;
+  background-image: url('../assets/images/map/icon-bg.png');
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+  padding-top: 3px;
+  .arrow-icon {
+    position: absolute;
+    display: none;
+    width: 10px;
+    height: 10px;
+    background-image: url('../assets/images/map/arrow-l.png');
+    background-size: cover;
+    &.lb {
+      left: 0;
+      bottom: 6px;
+    }
+    &.lt {
+      transform: scaleY(-1);
+      left: 0;
+      top: -5px;
+    }
+    &.rb {
+      transform: scaleX(-1);
+      right: 0;
+      bottom: 6px;
+    }
+    &.rt {
+      transform: scale(-1);
+      right: 0;
+      top: -5px;
+    }
+  }
+  &.active {
+    background-image: url('../assets/images/map/icon-bg-active.png');
+    transform: scale(1.2);
+    transform-origin: center bottom;
+    .arrow-icon {
+      display: block;
+    }
+  }
+  .point-pic {
+    width: 25px;
+    height: 25px;
+    background-size: cover;
+  }
+}
