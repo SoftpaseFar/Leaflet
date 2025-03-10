@@ -1,5 +1,5 @@
 # Leaflet
 
 <p align="center">
-  <img src="./leaflet.gif" alt="Leaflet" style="width:100%;" />
+  <img src="./leaflet.gif" alt="Leaflet" style="width:700px;" />
 </p>
